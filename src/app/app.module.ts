@@ -1,3 +1,4 @@
+import { ProductsModule } from './products/products.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -5,17 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 const APP_MODULES = [
-  // TODO define here custom modules
+  ProductsModule
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // ...APP_MODULES
+    ...APP_MODULES
   ],
   providers: [],
   bootstrap: [AppComponent]
