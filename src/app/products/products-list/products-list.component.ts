@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsListComponent implements OnInit {
 
-  products;
+  products : string[];
 
   constructor(productsService : ProductsService) { 
     this.products = productsService.getProducts();
@@ -16,4 +16,7 @@ export class ProductsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addProduct(product : string) {
+    this.products.push(product);
+  }
 }

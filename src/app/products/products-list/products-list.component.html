@@ -2,3 +2,9 @@
 <ul>
     <li *ngFor="let product of products"> {{ product }}</li>
 </ul>
+<div></div>
+<div>
+    Add new product:
+    <input type="text" #newProduct>
+    <button (click)="addProduct(newProduct.value)">Add</button>
+</div>

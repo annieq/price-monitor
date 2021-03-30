@@ -1,6 +1,8 @@
 export class ProductsService {
 
+    private products = ["product1", 'product2'];
+
     getProducts() {
-        return ["product1", 'product2'];
+        return this.products;
     }
 }
