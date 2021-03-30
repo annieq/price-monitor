@@ -19,4 +19,8 @@ export class ProductsListComponent implements OnInit {
   addProduct(product : string) {
     this.products.push(product);
   }
+
+  removeProduct(product : string) {
+    this.products = this.products.filter( obj => obj !== product);
+  }
 }

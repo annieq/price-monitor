@@ -1,7 +1,16 @@
 <h2>products list</h2>
-<ul>
-    <li *ngFor="let product of products"> {{ product }}</li>
-</ul>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{ product }}</td>
+        <td>
+            <button (click)="removeProduct(product)">Remove</button>
+        </td>
+    </tr>
+</table>
 <div></div>
 <div>
     Add new product:
